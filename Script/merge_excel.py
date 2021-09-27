@@ -52,6 +52,10 @@ def append_xlsx(ws: Worksheet, files_xlsx: list) -> None:
             ws.append(row)
 
 if __name__ == '__main__':
+    if not os.path.exists('..\Output'):
+        os.makedirs('..\Output')
+    if not os.path.exists('..\Input'):
+        os.makedirs('..\Input')
     with pd.ExcelWriter('..\Output\Planilla de Horas.xlsx', engine='openpyxl') as writer:
         files = os.listdir(IN_PATH)
         files_xlsx = [f for f in files if f[-4:] == 'xlsx']
