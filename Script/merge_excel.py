@@ -3,6 +3,7 @@
 # Si bien es mas facil unir varios archivos xlsx utilizando .append de pandas
 # decidi hacerlo de la siguiente forma para que el archivo final tenga un formato similar 
 # a los archivos de input
+#
 
 import os
 from openpyxl.worksheet.worksheet import Worksheet
